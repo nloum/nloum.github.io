@@ -14,17 +14,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: 'agent-toolbox',
-    tagline: 'Skills and AGENTS.md conventions for AI coding agents',
-    description:
-      'A collection of reusable skills and agent instruction files for Claude Code, Codex, and other AI coding agents.',
-    url: 'https://github.com/nloum/agent-toolbox',
-    language: 'Rust',
-    featured: true,
-    aiAssistance: 'none',
-    tags: ['AI tooling', 'CLI'],
-  },
-  {
     name: 'deep-search-replace',
     tagline: 'Recursive search/replace across folder names, file names, and contents',
     description:
@@ -32,7 +21,7 @@ export const projects: Project[] = [
     url: 'https://github.com/nloum/deep-search-replace',
     language: 'Rust',
     featured: true,
-    aiAssistance: 'none',
+    aiAssistance: 'high',
     tags: ['CLI', 'Developer tools'],
   },
   {
