@@ -43,7 +43,7 @@ export const projects: Project[] = [
     url: 'https://github.com/nloum/ComposableCollections',
     language: 'C#',
     featured: true,
-    aiAssistance: 'none',
+    aiAssistance: 'low',
     tags: ['.NET', 'Library'],
   },
   {
