@@ -66,12 +66,21 @@ export const projects: Project[] = [
     tags: ['Infrastructure', 'Kubernetes'],
   },
   {
-    name: 'portzero-sdk',
-    tagline: 'SDK for Port Zero, a local dev daemon exposing runtime service truth',
+    name: 'Port Zero',
+    tagline: 'Eliminate port conflicts in your dev environment',
     description:
-      'Client SDK for querying discovered services, tunnels, and routes from the Port Zero dev daemon.',
-    url: 'https://github.com/nloum/portzero-sdk',
-    language: 'TypeScript',
-    tags: ['Developer tools'],
+      'Lets the OS pick random available ports, then forwards them to virtual domains on a virtual NIC — so you can run multiple branches simultaneously without clashing.',
+    url: 'https://portzero.net',
+    language: 'Rust',
+    featured: true,
+    tags: ['Developer tools', 'Networking'],
+  },
+  {
+    name: 'portzero',
+    tagline: 'Open source core of Port Zero',
+    description: 'The open source engine behind Port Zero, maintained under the PortZeroNetwork org.',
+    url: 'https://github.com/PortZeroNetwork/portzero',
+    language: 'Rust',
+    tags: ['Developer tools', 'Networking'],
   },
 ];
