@@ -94,4 +94,14 @@ export const projects: Project[] = [
     aiAssistance: 'none',
     tags: ['Developer tools', 'Networking'],
   },
+  {
+    name: 'vmkit',
+    tagline: 'Parallels VM system-test control plane',
+    description:
+      'Golden-snapshot discipline, offline provisioning cache, guest-exec transport, and a CI harness for testing real installers on pristine VMs.',
+    url: 'https://github.com/PortZeroNetwork/vmkit',
+    language: 'Shell',
+    aiAssistance: 'none',
+    tags: ['Developer tools', 'Testing'],
+  },
 ];
