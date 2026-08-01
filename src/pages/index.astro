@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+
+const featured = projects.filter((p) => p.featured);
+---
+
+<BaseLayout title="Nate Loum">
+  <section class="hero">
+    <h1>Nate Loum</h1>
+    <p class="lede">
+      I build developer tools and infrastructure — from AI agent tooling to code generators to
+      .NET libraries.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Featured projects</h2>
+      <a href="/projects">All projects &rarr;</a>
+    </div>
+    <div class="grid">
+      {featured.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: 2rem 0 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .lede {
+    max-width: 42ch;
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-head h2 {
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+</style>

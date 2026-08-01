@@ -1,0 +1,85 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<a class="card" href={project.url} target="_blank" rel="noopener noreferrer">
+  <div class="card-head">
+    <h3>{project.name}</h3>
+    <span class="lang">{project.language}</span>
+  </div>
+  <p class="tagline">{project.tagline}</p>
+  <p class="description">{project.description}</p>
+  <div class="tags">
+    {project.tags.map((tag) => <span class="tag">{tag}</span>)}
+  </div>
+</a>
+
+<style>
+  .card {
+    display: block;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    color: var(--fg);
+    transition:
+      transform 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  .card:hover {
+    text-decoration: none;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .card-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .card-head h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .lang {
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .tagline {
+    margin: 0.35rem 0 0;
+    font-weight: 500;
+  }
+
+  .description {
+    margin: 0.35rem 0 0;
+    color: var(--muted);
+    font-size: 0.925rem;
+  }
+
+  .tags {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+  }
+</style>
