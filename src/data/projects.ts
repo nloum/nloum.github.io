@@ -39,7 +39,7 @@ export const projects: Project[] = [
     name: 'ComposableCollections',
     tagline: 'Composable, decorator-based collection types for C#',
     description:
-      'A library of collection interfaces and decorators designed to be combined like building blocks.',
+      'Composable .NET collections, a strongly-typed mockable filesystem (mountable via FUSE/Dokan/FTP), incremental reactive LINQ, and the Roslyn source generators that tie it together.',
     url: 'https://github.com/nloum/ComposableCollections',
     language: 'C#',
     featured: true,

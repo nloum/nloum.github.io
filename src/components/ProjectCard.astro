@@ -28,7 +28,7 @@ const aiLabel: Record<Project['aiAssistance'], string> = {
   <p class="description">{project.description}</p>
   <div class="tags">
     {project.private && <span class="tag private">Private repo</span>}
-    <span class={`tag ai ai-${project.aiAssistance}`}>{aiLabel[project.aiAssistance]}</span>
+    <span class="tag ai">{aiLabel[project.aiAssistance]}</span>
     {project.tags.map((tag) => <span class="tag">{tag}</span>)}
   </div>
 </Tag>
@@ -105,22 +105,7 @@ const aiLabel: Record<Project['aiAssistance'], string> = {
     border-color: var(--accent);
   }
 
-  .tag.ai-none {
-    opacity: 0.7;
-  }
-
-  .tag.ai-low {
-    color: #4a8f3c;
-    border-color: #4a8f3c;
-  }
-
-  .tag.ai-medium {
-    color: #b8860b;
-    border-color: #b8860b;
-  }
-
-  .tag.ai-high {
-    color: #c14444;
-    border-color: #c14444;
+  .tag.ai {
+    border-style: dashed;
   }
 </style>
