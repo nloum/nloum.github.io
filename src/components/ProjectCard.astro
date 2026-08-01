@@ -6,9 +6,13 @@ interface Props {
 }
 
 const { project } = Astro.props;
+const Tag = project.url ? 'a' : 'div';
+const linkProps = project.url
+  ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' }
+  : {};
 ---
 
-<a class="card" href={project.url} target="_blank" rel="noopener noreferrer">
+<Tag class="card" class:list={{ 'card-static': !project.url }} {...linkProps}>
   <div class="card-head">
     <h3>{project.name}</h3>
     <span class="lang">{project.language}</span>
@@ -16,9 +20,10 @@ const { project } = Astro.props;
   <p class="tagline">{project.tagline}</p>
   <p class="description">{project.description}</p>
   <div class="tags">
+    {project.private && <span class="tag private">Private repo</span>}
     {project.tags.map((tag) => <span class="tag">{tag}</span>)}
   </div>
-</a>
+</Tag>
 
 <style>
   .card {
@@ -33,10 +38,14 @@ const { project } = Astro.props;
       border-color 0.15s ease;
   }
 
-  .card:hover {
+  .card:not(.card-static):hover {
     text-decoration: none;
     border-color: var(--accent);
     transform: translateY(-2px);
+  }
+
+  .card-static {
+    cursor: default;
   }
 
   .card-head {
@@ -81,5 +90,10 @@ const { project } = Astro.props;
     border: 1px solid var(--border);
     border-radius: 999px;
     padding: 0.15rem 0.6rem;
+  }
+
+  .tag.private {
+    color: var(--accent);
+    border-color: var(--accent);
   }
 </style>

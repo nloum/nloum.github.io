@@ -2,9 +2,10 @@ export interface Project {
   name: string;
   tagline: string;
   description: string;
-  url: string;
+  url?: string;
   language: string;
   featured?: boolean;
+  private?: boolean;
   tags: string[];
 }
 
@@ -44,10 +45,19 @@ export const projects: Project[] = [
     tagline: 'Composable, decorator-based collection types for C#',
     description:
       'A library of collection interfaces and decorators designed to be combined like building blocks.',
-    url: 'https://github.com/nloum/ComposableCollections',
     language: 'C#',
     featured: true,
+    private: true,
     tags: ['.NET', 'Library'],
+  },
+  {
+    name: 'CodeIO',
+    tagline: 'Read and generate C# source code',
+    description: 'A C# library for reading and generating C# source code.',
+    url: 'https://github.com/nloum/CodeIO',
+    language: 'C#',
+    featured: true,
+    tags: ['.NET', 'Code generation'],
   },
   {
     name: 'clicycle',
