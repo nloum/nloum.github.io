@@ -1,3 +1,5 @@
+export type AiAssistance = 'none' | 'low' | 'medium' | 'high';
+
 export interface Project {
   name: string;
   tagline: string;
@@ -6,6 +8,7 @@ export interface Project {
   language: string;
   featured?: boolean;
   private?: boolean;
+  aiAssistance: AiAssistance;
   tags: string[];
 }
 
@@ -18,6 +21,7 @@ export const projects: Project[] = [
     url: 'https://github.com/nloum/agent-toolbox',
     language: 'Rust',
     featured: true,
+    aiAssistance: 'none',
     tags: ['AI tooling', 'CLI'],
   },
   {
@@ -28,6 +32,7 @@ export const projects: Project[] = [
     url: 'https://github.com/nloum/deep-search-replace',
     language: 'Rust',
     featured: true,
+    aiAssistance: 'none',
     tags: ['CLI', 'Developer tools'],
   },
   {
@@ -38,6 +43,7 @@ export const projects: Project[] = [
     url: 'https://github.com/nloum/InfisicalDotNet',
     language: 'C#',
     featured: true,
+    aiAssistance: 'none',
     tags: ['.NET', 'Infrastructure'],
   },
   {
@@ -48,6 +54,7 @@ export const projects: Project[] = [
     language: 'C#',
     featured: true,
     private: true,
+    aiAssistance: 'none',
     tags: ['.NET', 'Library'],
   },
   {
@@ -57,6 +64,7 @@ export const projects: Project[] = [
     url: 'https://github.com/nloum/CodeIO',
     language: 'C#',
     featured: true,
+    aiAssistance: 'none',
     tags: ['.NET', 'Code generation'],
   },
   {
@@ -65,6 +73,7 @@ export const projects: Project[] = [
     description: 'Generates strongly-typed command line parsers from simple declarative definitions.',
     url: 'https://github.com/nloum/clicycle',
     language: 'C#',
+    aiAssistance: 'none',
     tags: ['.NET', 'CLI'],
   },
   {
@@ -73,6 +82,7 @@ export const projects: Project[] = [
     description: 'Generated Pulumi type definitions for Kubernetes Custom Resource Definitions.',
     url: 'https://github.com/nloum/Pulumi.Kubernetes.Crds',
     language: 'C#',
+    aiAssistance: 'none',
     tags: ['Infrastructure', 'Kubernetes'],
   },
   {
@@ -83,6 +93,7 @@ export const projects: Project[] = [
     url: 'https://portzero.net',
     language: 'Rust',
     featured: true,
+    aiAssistance: 'high',
     tags: ['Developer tools', 'Networking'],
   },
   {
@@ -91,6 +102,7 @@ export const projects: Project[] = [
     description: 'The open source engine behind Port Zero, maintained under the PortZeroNetwork org.',
     url: 'https://github.com/PortZeroNetwork/portzero',
     language: 'Rust',
+    aiAssistance: 'none',
     tags: ['Developer tools', 'Networking'],
   },
 ];
