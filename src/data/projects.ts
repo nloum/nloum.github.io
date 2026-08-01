@@ -40,9 +40,9 @@ export const projects: Project[] = [
     tagline: 'Composable, decorator-based collection types for C#',
     description:
       'A library of collection interfaces and decorators designed to be combined like building blocks.',
+    url: 'https://github.com/nloum/ComposableCollections',
     language: 'C#',
     featured: true,
-    private: true,
     aiAssistance: 'none',
     tags: ['.NET', 'Library'],
   },
