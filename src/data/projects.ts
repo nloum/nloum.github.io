@@ -7,6 +7,8 @@ export interface Project {
   url?: string;
   /** Internal path to a written case study, e.g. '/case-studies/portzero/'. */
   caseStudy?: string;
+  /** Source repository, shown as a secondary link when `url` is the product site. */
+  repo?: string;
   language: string;
   featured?: boolean;
   private?: boolean;
@@ -80,23 +82,15 @@ export const projects: Project[] = [
     name: 'Port Zero',
     tagline: 'Eliminate port conflicts in your dev environment',
     description:
-      'Lets the OS pick random available ports, then forwards them to virtual domains on a virtual NIC — so you can run multiple branches simultaneously without clashing.',
+      'Lets the OS pick random available ports, then forwards them to virtual domains on a virtual NIC — so you can run multiple branches simultaneously without clashing. Open-source core, maintained under the PortZeroNetwork org.',
     url: 'https://portzero.net',
+    repo: 'https://github.com/PortZeroNetwork/portzero',
     // Re-enable once the case study is published (it's draft, so this
     // route doesn't exist in production builds and would 404):
     // caseStudy: '/case-studies/portzero/',
     language: 'Rust',
     featured: true,
     aiAssistance: 'high',
-    tags: ['Developer tools', 'Networking'],
-  },
-  {
-    name: 'portzero',
-    tagline: 'Open source core of Port Zero',
-    description: 'The open source engine behind Port Zero, maintained under the PortZeroNetwork org.',
-    url: 'https://github.com/PortZeroNetwork/portzero',
-    language: 'Rust',
-    aiAssistance: 'none',
     tags: ['Developer tools', 'Networking'],
   },
   {

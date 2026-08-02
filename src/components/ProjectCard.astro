@@ -6,9 +6,10 @@ interface Props {
 }
 
 const { project } = Astro.props;
-// Cards with a case study become plain containers with explicit links inside,
-// since an <a> can't nest another <a>.
-const Tag = project.url && !project.caseStudy ? 'a' : 'div';
+// Cards with inner links (case study, repo) become plain containers with
+// explicit links inside, since an <a> can't nest another <a>.
+const hasInnerLinks = Boolean(project.caseStudy || project.repo);
+const Tag = project.url && !hasInnerLinks ? 'a' : 'div';
 const linkProps =
   Tag === 'a' ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' } : {};
 
@@ -28,12 +29,17 @@ const aiLabel: Record<Project['aiAssistance'], string> = {
   <p class="tagline">{project.tagline}</p>
   <p class="description">{project.description}</p>
   {
-    project.caseStudy && (
+    hasInnerLinks && (
       <p class="links">
-        <a href={project.caseStudy}>Case study →</a>
+        {project.caseStudy && <a href={project.caseStudy}>Case study →</a>}
         {project.url && (
           <a href={project.url} target="_blank" rel="noopener noreferrer">
             {new URL(project.url).host} ↗
+          </a>
+        )}
+        {project.repo && (
+          <a href={project.repo} target="_blank" rel="noopener noreferrer">
+            GitHub ↗
           </a>
         )}
       </p>
