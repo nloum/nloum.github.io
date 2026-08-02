@@ -53,4 +53,4 @@ There are a few choices you can make up front that make thinking about scaling m
 - Carefully design and build a comprehensive system test framework that is not tied to your tech stack and does not flake
 - Use event sourcing or other architectural patterns that are friendly to database replication, e.g. when moving between cloud providers
 
-Build your codebase, polish it shiny with system tests, and hand it on a platter to the AI that will make it scale--but only when the time comes.
+Build your codebase, polish it shiny with system tests, and hand it on a platter to the migration phase that will make it scale--but only when the time comes.
