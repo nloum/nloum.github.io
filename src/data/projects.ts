@@ -5,6 +5,8 @@ export interface Project {
   tagline: string;
   description: string;
   url?: string;
+  /** Internal path to a written case study, e.g. '/case-studies/portzero/'. */
+  caseStudy?: string;
   language: string;
   featured?: boolean;
   private?: boolean;
@@ -80,6 +82,9 @@ export const projects: Project[] = [
     description:
       'Lets the OS pick random available ports, then forwards them to virtual domains on a virtual NIC — so you can run multiple branches simultaneously without clashing.',
     url: 'https://portzero.net',
+    // Re-enable once the case study is published (it's draft, so this
+    // route doesn't exist in production builds and would 404):
+    // caseStudy: '/case-studies/portzero/',
     language: 'Rust',
     featured: true,
     aiAssistance: 'high',

@@ -6,10 +6,11 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const Tag = project.url ? 'a' : 'div';
-const linkProps = project.url
-  ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' }
-  : {};
+// Cards with a case study become plain containers with explicit links inside,
+// since an <a> can't nest another <a>.
+const Tag = project.url && !project.caseStudy ? 'a' : 'div';
+const linkProps =
+  Tag === 'a' ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' } : {};
 
 const aiLabel: Record<Project['aiAssistance'], string> = {
   none: 'No AI assistance',
@@ -26,6 +27,18 @@ const aiLabel: Record<Project['aiAssistance'], string> = {
   </div>
   <p class="tagline">{project.tagline}</p>
   <p class="description">{project.description}</p>
+  {
+    project.caseStudy && (
+      <p class="links">
+        <a href={project.caseStudy}>Case study →</a>
+        {project.url && (
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
+            {new URL(project.url).host} ↗
+          </a>
+        )}
+      </p>
+    )
+  }
   <div class="tags">
     {project.private && <span class="tag private">Private repo</span>}
     <span class="tag ai">{aiLabel[project.aiAssistance]}</span>
@@ -83,6 +96,13 @@ const aiLabel: Record<Project['aiAssistance'], string> = {
     margin: 0.35rem 0 0;
     color: var(--muted);
     font-size: 0.925rem;
+  }
+
+  .links {
+    margin: 0.6rem 0 0;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
   }
 
   .tags {
