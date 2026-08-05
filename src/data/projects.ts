@@ -18,6 +18,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: 'newtrain',
+    tagline: 'Spectral LLM experiments, and gating a language model with 40-year-old algorithms',
+    description:
+      'Five parameter-matched transformer variants testing FFT/conv blocks against attention (honest negative, replicated on two corpora), plus a mixture-of-algorithms system that cut a trained model\'s bits-per-character on Wikipedia by 5.5% with no retraining. Includes a certified 3-D visualization tool whose math is machine-verified against its own equations. All on one 4GB consumer GPU.',
+    url: 'https://github.com/nloum/newtrain',
+    caseStudy: '/case-studies/spectral-llm/',
+    language: 'Python',
+    featured: true,
+    aiAssistance: 'high',
+    tags: ['Machine learning', 'Research', 'Visualization'],
+  },
+  {
     name: 'deep-search-replace',
     tagline: 'Recursive search/replace across folder names, file names, and contents',
     description:
