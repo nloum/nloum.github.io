@@ -18,18 +18,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: 'newtrain',
-    tagline: 'Spectral LLM experiments, and gating a language model with 40-year-old algorithms',
-    description:
-      'Five parameter-matched transformer variants testing FFT/conv blocks against attention (honest negative, replicated on two corpora), plus a mixture-of-algorithms system that cut a trained model\'s bits-per-character on Wikipedia by 5.5% with no retraining. Includes a certified 3-D visualization tool whose math is machine-verified against its own equations. All on one 4GB consumer GPU.',
-    url: 'https://github.com/nloum/newtrain',
-    caseStudy: '/case-studies/spectral-llm/',
-    language: 'Python',
-    featured: true,
-    aiAssistance: 'high',
-    tags: ['Machine learning', 'Research', 'Visualization'],
-  },
-  {
     name: 'deep-search-replace',
     tagline: 'Recursive search/replace across folder names, file names, and contents',
     description:
@@ -52,11 +40,11 @@ export const projects: Project[] = [
     tags: ['.NET', 'Infrastructure'],
   },
   {
-    name: 'ComposableCollections',
-    tagline: 'Composable, decorator-based collection types for C#',
+    name: 'LiveLinq',
+    tagline: 'LINQ over live, mutable collections',
     description:
-      'Composable .NET collections, a strongly-typed mockable filesystem (mountable via FUSE/Dokan/FTP), incremental reactive LINQ, and the Roslyn source generators that tie it together.',
-    url: 'https://github.com/nloum/ComposableCollections',
+      'Rx.NET-based reactive queries over lists, sets, and dictionaries, so LINQ expressions stay live as the underlying collections change.',
+    url: 'https://github.com/nloum/LiveLinq',
     language: 'C#',
     featured: true,
     aiAssistance: 'low',
@@ -82,15 +70,6 @@ export const projects: Project[] = [
     tags: ['.NET', 'CLI'],
   },
   {
-    name: 'Pulumi.Kubernetes.Crds',
-    tagline: 'Auto-generated CRD types for Pulumi Kubernetes',
-    description: 'Generated Pulumi type definitions for Kubernetes Custom Resource Definitions.',
-    url: 'https://github.com/nloum/Pulumi.Kubernetes.Crds',
-    language: 'C#',
-    aiAssistance: 'none',
-    tags: ['Infrastructure', 'Kubernetes'],
-  },
-  {
     name: 'Port Zero',
     tagline: 'Eliminate port conflicts in your dev environment',
     description:
@@ -104,15 +83,5 @@ export const projects: Project[] = [
     featured: true,
     aiAssistance: 'high',
     tags: ['Developer tools', 'Networking'],
-  },
-  {
-    name: 'vmkit',
-    tagline: 'Parallels VM system-test control plane',
-    description:
-      'Golden-snapshot discipline, offline provisioning cache, guest-exec transport, and a CI harness for testing real installers on pristine VMs.',
-    url: 'https://github.com/PortZeroNetwork/vmkit',
-    language: 'Shell',
-    aiAssistance: 'high',
-    tags: ['Developer tools', 'Testing'],
   },
 ];
