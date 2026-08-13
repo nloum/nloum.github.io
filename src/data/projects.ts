@@ -70,6 +70,17 @@ export const projects: Project[] = [
     tags: ['.NET', 'CLI'],
   },
   {
+    name: 'ticketry',
+    tagline: 'Git-native issue tracking — a Jira alternative with the data in git',
+    description:
+      'Tickets are Markdown files committed alongside your code, so diffs, blame, and branching just work. A local SQLite index powers fast queries, and a kanban board, TUI, and MCP server ship in the box.',
+    url: 'https://github.com/LoumTechnologies/ticketry',
+    language: 'Rust',
+    featured: true,
+    aiAssistance: 'high',
+    tags: ['Developer tools', 'CLI', 'Git'],
+  },
+  {
     name: 'Port Zero',
     tagline: 'Eliminate port conflicts in your dev environment',
     description:
