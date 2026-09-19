@@ -15,9 +15,9 @@ var codeWriter = new CodeWriter();
 
 foreach(var clazz in DomainClasses)
 {
-	if (clazz.Attributes.Any(attr => attr.Type.Name == "HideFromApi")) continue;
+    if (clazz.Attributes.Any(attr => attr.Type.Name == "HideFromApi")) continue;
 
-	codeWriter.WriteLine("public class {clazz.Name}Dto {")
+    codeWriter.WriteLine("public class {clazz.Name}Dto {")
 
     foreach(var property in clazz.Properties)
     {
