@@ -1,5 +1,5 @@
 ---
-title: 'CodeIO: code generation scripts + AI is better than plain AI'
+title: 'CodeIO: sprinkle determinism into your AI for better PRs'
 description: 'How CodeIO makes PR review easier.'
 pubDate: 2026-09-19
 draft: false
