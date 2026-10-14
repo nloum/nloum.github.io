@@ -6,7 +6,11 @@ draft: false
 tags: ['ai', 'engineering', 'agents']
 ---
 
-![Stone building corner viewed from below](./cornerstone.jpg)
+<img
+  src="/images/cornerstone.jpg"
+  alt="Stone building corner viewed from below"
+  width="200"
+/>
 
 You know using Claude Code can make you lose track of your architecture? It can be disconcerting to need to work without AI.
 
