@@ -10,6 +10,7 @@ tags: ['ai', 'engineering', 'agents']
   src="/images/cornerstone.jpg"
   alt="Stone building corner viewed from below"
   width="200"
+  style="display: block; margin: 0 auto;"
 />
 
 You know using Claude Code can make you lose track of your architecture? It can be disconcerting to need to work without AI.
