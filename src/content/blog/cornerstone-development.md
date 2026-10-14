@@ -23,4 +23,4 @@ I want to understand the architecture. Leave changes that establish or alter arc
 Example: I create `main.py` for a new production process; you may add a controller alongside existing controllers
 ```
 
-I call this *cornerstone-driven development*. You're laying the cornerstones and letting the AI fill in the finer detais.
+I call this *cornerstone-driven development*. See the image at the top? You're laying the cornerstones and letting the AI fill in the walls.
